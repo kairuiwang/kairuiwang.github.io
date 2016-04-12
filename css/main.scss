@@ -8,7 +8,7 @@
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-weight: 100;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -28,7 +28,100 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+@mixin bold-links {
+  text-decoration: none;
+  font-weight: 200;
+}
 
+.navbar {
+  margin-top: 11vh;
+
+  .title {
+    font-size: 34pt;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 0px;
+  }
+
+  .sub-title {
+    font-size: 18pt;
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+  }
+
+  .contacts {
+    text-align: center;
+    margin-top: 18px;
+
+    .contact {
+      display: block;
+      line-height: 35px;
+      font-size: 16pt;
+      letter-spacing: 2px;
+
+      &:hover {
+        @include bold-links;
+      }
+    }
+  }
+}
+
+hr.horizontal-divider {
+  text-align: center;
+  border: 0;
+  height: 1px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: $text-color;
+  color: $text-color;
+
+  &:after {
+    content: "x";
+    position: relative;
+    top: -13px;
+    padding: 0% 5% 0% 5%;
+    background-color: $background-color;
+  }
+}
+
+.cv {
+  padding-top: 11vh;
+
+  .cv-section {
+    margin-bottom: 8px;
+
+    .section-heading {
+      letter-spacing: 2px;
+      font-size: 20pt;
+      margin-bottom: 3px;
+    }
+
+    .description {
+      letter-spacing: 0.3px;
+      margin-bottom: 5px;
+
+      a:hover {
+        @include bold-links;
+      }
+
+      .name {
+        font-size: 16pt;
+      }
+
+      .dates {
+        font-size: 16pt;
+        float: right;
+      }
+
+      .achievements {
+        font-size: 14pt;
+      }
+    }
+  }
+}
 
 // Use media queries like this:
 // @include media-query($on-palm) {
