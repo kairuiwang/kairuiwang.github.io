@@ -1,0 +1,38 @@
+{
+  "name": "kairuiwang.github.io",
+  "version": "1.0.0",
+  "description": "Kairui's personal site",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --config webpack/dev.config.js",
+    "start": "webpack-dev-server --open --config webpack/dev.config.js",
+    "build": "webpack --config webpack/prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kairuiwang/kairuiwang.github.io.git"
+  },
+  "author": "Kairui Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kairuiwang/kairuiwang.github.io/issues"
+  },
+  "homepage": "https://github.com/kairuiwang/kairuiwang.github.io#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.1.5"
+  },
+  "dependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "styled-components": "^4.1.3"
+  }
+}
